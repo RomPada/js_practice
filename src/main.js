@@ -565,13 +565,126 @@
 
 // // ==== Task 47 - Пошук найбільшої ціни
 
-const prices = [1000, 500, 250, 750, 1200];
+// const prices = [1000, 500, 250, 750, 1200];
 
-let highestPrices = 0;
-for (let i = 0; i < prices.length; i++) {
-  if (highestPrices < prices[i]) {
-    highestPrices = prices[i];
-  }
-}
-console.log(`Найбільша ціна: ${highestPrices} грн.`);
+// let maxPrice = 0;
+// // let maxPrice = prices[0];
+// for (let i = 0; i < prices.length; i++) {
+//   if (maxPrice < prices[i]) {
+//     maxPrice = prices[i];
+//   }
+// }
+// console.log(`Найбільша ціна: ${maxPrice} грн.`);
 
+// // ==== Task 48 - Пошук найменшої ціни
+
+// const prices = [1000, 500, 250, 750, 1200];
+
+// let minPrice = prices[0];
+// for (let i = 0; i < prices.length; i++) {
+//   if (minPrice > prices[i]) {
+//     minPrice = prices[i];
+//   }
+// }
+// console.log(`Найменша ціна: ${minPrice} грн.`);
+
+// // ==== Task 49 - Підрахунок середньої ціни
+
+// const prices = [1000, 500, 250, 750, 1200];
+
+// let totalPrices = 0;
+
+// for (let i = 0; i < prices.length; i++) {
+//   totalPrices += prices[i];
+// }
+// const averagePrice = totalPrices / prices.length;
+
+// console.log(`Середня ціна: ${averagePrice} грн.`);
+
+// // ==== Task 50 - Підрахунок суми тільки дорогих товарів
+
+// const prices = [1000, 500, 250, 750, 1200];
+
+// let totalExpensivePrice = 0;
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] > 500) {
+//     totalExpensivePrice += prices[i];
+//   }
+// }
+
+// console.log(`Сума дорогих товарів: ${totalExpensivePrice} грн.`);
+
+// // ==== Task 51 - Підрахунок кількості слів довших за 5 символів
+
+// const words = ['apple', 'banana', 'cat', 'elephant', 'dog', 'computer'];
+
+// let counter = 0;
+
+// for (let i = 0; i < words.length; i++) {
+//   if (words[i].length > 5) {
+//     counter++;
+//   }
+// }
+// console.log(`Слів довших за 5 символів: ${counter}`);
+
+// // ==== Task 52 - Створення масиву довгих слів
+
+// const words = ['apple', 'banana', 'cat', 'elephant', 'dog', 'computer'];
+
+// const longWords = [];
+
+// for (let i = 0; i < words.length; i++) {
+//   if (words[i].length > 5) {
+//     longWords.push(words[i]);
+//   }
+// }
+// console.log(longWords.join(`, `));
+
+// // ==== Task 53 - Створення масиву слів у верхньому регістрі
+
+// const words = ['apple', 'banana', 'cat', 'elephant'];
+
+// const upperCaseWords = [];
+// for (let i = 0; i < words.length; i++) {
+//   upperCaseWords.push(words[i].toUpperCase());
+// }
+// console.log(upperCaseWords.join(`, `));
+
+// // ==== Task 54 - Створення масиву слів у нижньому регістрі
+
+// const words = ['APPLE', 'BANANA', 'CAT', 'ELEPHANT'];
+
+// const lowerCaseWords = [];
+// for (let i = 0; i < words.length; i++) {
+//   lowerCaseWords.push(words[i].toLowerCase());
+// }
+// console.log(lowerCaseWords.join(`, `));
+
+// // ==== Task 55 - Пошук слова, яке починається на певну літеру
+
+// const words = ['apple', 'banana', 'cat', 'elephant', 'avocado'];
+
+// const wordsWithA = [];
+// for (let i = 0; i < words.length; i++) {
+//   if (words[i][0] === 'a') {
+//     wordsWithA.push(words[i]);
+//   }
+// }
+// console.log(wordsWithA.join(`, `));
+
+// // ==== Task 56 - Пошук слів, які закінчуються на певну літеру (finished 12.07.26)
+
+// const words = ['apple', 'banana', 'cat', 'elephant', 'avocado'];
+
+// const wordsWithAEnd = [];
+// for (let i = 0; i < words.length; i++) {
+//   //   let endWords = words[i].length - 1;
+//   //   if (words[i][endWords] === 'a') {
+//   if (words[i][words[i].length - 1] === 'a') {
+//     wordsWithAEnd.push(words[i]);
+//   }
+// }
+// console.log(wordsWithAEnd.join(`, `));
+
+// // ==== Task 57 - Пошук слів, які містять літеру
