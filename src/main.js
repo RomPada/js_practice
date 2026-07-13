@@ -687,4 +687,78 @@
 // }
 // console.log(wordsWithAEnd.join(`, `));
 
-// // ==== Task 57 - Пошук слів, які містять літеру
+// // ==== Task 57 - Пошук слів, які містять літеру (started 13.07.26)
+
+// const words = ['apple', 'banana', 'cat', 'elephant', 'avocado'];
+
+// const wordsWithN = [];
+
+// for (let i = 0; i < words.length; i++) {
+//   for (let a = 0; a < words[i].length; a++) {
+//     if (words[i][a] === 'n') {
+//       wordsWithN.push(words[i]);
+//       break;
+//     }
+//   }
+// }
+// console.log(wordsWithN.join(", "))
+
+// // v.2
+
+// for (let i = 0; i < words.length; i++) {
+//   if (words[i].includes('n')) {
+//     wordsWithN.push(words[i]);
+//   }
+// }
+
+// console.log(wordsWithN.join(', '));
+
+// // ==== Task 58 - Підрахунок слів, які містять літеру
+
+// const words = ['apple', 'banana', 'cat', 'elephant', 'avocado'];
+
+// let counter = 0;
+
+// for (let i = 0; i < words.length; i++) {
+//   if (words[i].includes('a')) {
+//     counter++;
+//   }
+// }
+
+// console.log(`Слів з літерою a: ${counter}`);
+
+// // ==== Task 59 - Підрахунок кількості літери в одному слові
+
+// const word = 'banana';
+
+// let counter = 0;
+// const letter = 'a';
+
+// for (let i = 0; i < word.length; i++) {
+//   if (word[i] === letter) {
+//     counter++;
+//   }
+// }
+
+// console.log(`Літера ${letter} зустрічається ${counter} рази`);
+
+// // ==== Task 60 - Підрахунок літери в масиві слів (finished 13.07.26)
+
+// const words = ['banana', 'apple', 'avocado'];
+
+// const letter = 'a';
+// let counter = 0;
+
+// for (let i = 0; i < words.length; i++) {
+//   for (let j = 0; j < words[i].length; j++) {
+//     if (words[i][j] === letter) {
+//       counter++;
+//     }
+//   }
+// }
+// console.log(`Літера ${letter} зустрічається ${counter} разів`);
+
+// // ==== Task 61 - Порахувати кількість голосних у слові
+
+const word = 'javascript';
+
