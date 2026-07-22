@@ -758,7 +758,695 @@
 // }
 // console.log(`Літера ${letter} зустрічається ${counter} разів`);
 
-// // ==== Task 61 - Порахувати кількість голосних у слові
+// // ==== Task 61 - Порахувати кількість голосних у слові (started 14.07.26)
 
-const word = 'javascript';
+// const word = 'javascript';
+// const vowels = ['a', 'e', 'i', 'o', 'u'];
 
+// let counter = 0;
+
+// for (let i = 0; i < word.length; i++) {
+//   for (let j = 0; j < vowels.length; j++) {
+//     if (word[i] === vowels[j]) {
+//       counter++;
+//     }
+//   }
+// }
+// console.log(`Кількість голосних: ${counter}`);
+
+// // v.2 from chat
+
+// for (let i = 0; i < word.length; i++) {
+//   if (vowels.includes(word[i])) {
+//     counter++;
+//   }
+// }
+
+// console.log(`Кількість голосних: ${counter}`);
+
+// // ==== Task 62 - Створення масиву голосних зі слова
+
+// const word = 'javascript';
+
+// const vowels = ['a', 'e', 'i', 'o', 'u'];
+// const foundVowels = [];
+
+// for (let i = 0; i < word.length; i++) {
+//   if (vowels.includes(word[i])) {
+//     foundVowels.push(word[i]);
+//   }
+// }
+
+// console.log(foundVowels.join(`, `));
+
+// // ==== Task 63 - Прибрати голосні зі слова
+
+// const word = 'javascript';
+
+// const vowels = ['a', 'e', 'i', 'o', 'u'];
+// let result = '';
+
+// for (let i = 0; i < word.length; i++) {
+//   if (vowels.includes(word[i]) === false) {
+//     // !vowels.includes(word[i])
+//     result += word[i];
+//   }
+// }
+
+// console.log(result);
+
+// // ==== Task 64 - Порахувати приголосні у слові
+
+// const word = 'javascript';
+
+// const vowels = ['a', 'e', 'i', 'o', 'u'];
+// let counter = 0;
+
+// for (let i = 0; i < word.length; i++) {
+//   if (!vowels.includes(word[i])) {
+//     counter++;
+//   }
+// }
+// console.log(`Кількість приголосних: ${counter}`);
+
+// // ==== Task 65 - Розділити слово на голосні та приголосні
+
+// const word = 'javascript';
+
+// const vowels = ['a', 'e', 'i', 'o', 'u'];
+// let vowelLetters = '';
+// let consonantLetters = '';
+
+// for (let i = 0; i < word.length; i++) {
+//   if (vowels.includes(word[i])) {
+//     vowelLetters += word[i];
+//   } else {
+//     consonantLetters += word[i];
+//   }
+// }
+// console.log(`Голосні: ${vowelLetters}`);
+// console.log(`Приголосні: ${consonantLetters}`);
+
+// // ==== Task 66 - Перевернути слово
+
+// const word = 'javascript';
+
+// let reversedWord = ``;
+
+// for (let i = word.length; i > 0; i--) {
+//   reversedWord += word[i - 1];
+// }
+// console.log(reversedWord);
+
+// // ==== Task 67 - Перевірка, чи слово є паліндромом
+
+// const word = 'level';
+
+// let reversedWord = ``;
+
+// for (let i = word.length; i > 0; i--) {
+//   reversedWord += word[i - 1];
+// }
+// if (reversedWord === word) {
+//   console.log(`Слово ${word} є паліндромом`);
+// } else {
+//   console.log(`Слово ${word} не є паліндромом`);
+// }
+
+// // ==== Task 68 - Порахувати кількість парних чисел
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// let counter = 0;
+
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 === 0) {
+//     counter++;
+//   }
+// }
+// console.log(`Кількість парних чисел: ${counter}`);
+
+// // ==== Task 69 - Створити масив парних чисел
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// const evenNumbers = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 === 0) {
+//     evenNumbers.push(numbers[i]);
+//   }
+// }
+// console.log(evenNumbers.join(`, `));
+
+// // ==== Task 70 - Створити масив непарних чисел
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// const oddNumbers = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 !== 0) {
+//     oddNumbers.push(numbers[i]);
+//   }
+// }
+// console.log(oddNumbers.join(`, `));
+
+// // ==== Task 71 - Сума парних чисел
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// let total = 0;
+
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 === 0) {
+//     total += numbers[i];
+//   }
+// }
+// console.log(`Сума парних чисел: ${total}`);
+
+// // ==== Task 72 - Сума непарних чисел
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// let total = 0;
+
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 !== 0) {
+//     total += numbers[i];
+//   }
+// }
+// console.log(`Сума непарних  чисел: ${total}`);
+
+// // ==== Task 73 - Розділити числа на парні та непарні
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// const evenNumbers = [];
+// const oddNumbers = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 === 0) {
+//     evenNumbers.push(numbers[i]);
+//   } else {
+//     oddNumbers.push(numbers[i]);
+//   }
+// }
+// console.log(`Парні числа: ${evenNumbers.join(', ')}`);
+// console.log(`Непарні числа: ${oddNumbers.join(', ')}`);
+
+// // ==== Task 74 - Знайти найбільше парне число
+
+// const numbers = [3, 8, 1, 12, 7, 4, 15];
+
+// let maxEvenNumber = 0;
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 === 0) {
+//     if (maxEvenNumber < numbers[i]) {
+//       maxEvenNumber = numbers[i];
+//     }
+//   }
+// }
+// console.log(`Найбільше парне число: ${maxEvenNumber}`);
+
+// let maxEvenNumber2 = 0;
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 === 0 && maxEvenNumber2 < numbers[i]) {
+//     maxEvenNumber2 = numbers[i];
+//   }
+// }
+// console.log(`Найбільше парне число: ${maxEvenNumber2}`);
+
+// // ==== Task 75 - Знайти найменше непарне число
+
+// const numbers = [10, 3, 8, 1, 12, 7, 4, 15];
+
+// let minOddNum = null;
+// for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] % 2 !== 0 &&
+//         (minOddNum === null || numbers[i] < minOddNum)) {
+//     minOddNum = numbers[i];
+//   }
+// }
+// console.log(`Найменше непарне число: ${minOddNum}`);
+
+// // ==== Task 76. Порахувати кількість додатних і від’ємних чисел
+
+// const numbers = [10, -3, 8, -1, 0, 12, -7, 4];
+
+// let positiveNum = 0;
+// let negativeNum = 0;
+
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] > 0) {
+//     positiveNum++;
+//   } else if (numbers[i] < 0) {
+//     negativeNum++;
+//   }
+// }
+// console.log(`Додатних чисел: ${positiveNum}`);
+// console.log(`Від’ємних чисел: ${negativeNum}`);
+
+// // ==== Task 77. Розділити числа на додатні, від’ємні та нулі
+
+// const numbers = [10, -3, 8, -1, 0, 12, -7, 4, 0];
+
+// const positiveNumbers = [];
+// const negativeNumbers = [];
+// const zeroNumbers = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] > 0) {
+//     positiveNumbers.push(numbers[i]);
+//   } else if (numbers[i] < 0) {
+//     negativeNumbers.push(numbers[i]);
+//   } else {
+//     zeroNumbers.push(numbers[i]);
+//   }
+// }
+// console.log(`Додатні: ${positiveNumbers.join(', ')}`);
+// console.log(`Від’ємні: ${negativeNumbers.join(', ')}`);
+// console.log(`Нулі: ${zeroNumbers.join(', ')}`);
+
+// // ==== Task 78. Помножити усі числа на 2
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const doubledNumbers = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   //   let newNum = numbers[i] * 2;
+//   //   doubledNumbers.push(newNum);
+//   doubledNumbers.push(numbers[i] * 2);
+// }
+// console.log(doubledNumbers.join(', '));
+
+// // ==== Task 79. Створити масив квадратів чисел
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const squaredNumbers = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   squaredNumbers.push(numbers[i] * numbers[i]);
+// // squaredNumbers.push(numbers[i] ** 2);
+// }
+// console.log(squaredNumbers.join(', '));
+
+// // ==== Task 80. Створити масив чисел, збільшених на 10
+
+// const numbers = [5, 10, 15, 20];
+
+// const increasedNumbers = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   increasedNumbers.push(numbers[i] + 10);
+// }
+// console.log(increasedNumbers.join(', '));
+
+// // ==== Task 81. Створити масив цін зі знижкою 20%
+
+// const prices = [1000, 500, 2000, 750];
+
+// const discountPrices = [];
+
+// for (let i = 0; i < prices.length; i++) {
+//   discountPrices.push(prices[i] * 0.8);
+// }
+// console.log(discountPrices.join(', '));
+
+// // ==== Task 82. Створити масив цін з ПДВ
+
+// const prices = [1000, 500, 2000, 750];
+
+// const pricesWithTax = [];
+
+// for (let i = 0; i < prices.length; i++) {
+//   pricesWithTax.push(prices[i] * 1.2);
+// }
+// console.log(pricesWithTax.join(', '));
+
+// // ==== Task 83. Створити масив повідомлень про товари
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура'];
+// const prices = [25000, 800, 1500];
+
+// const messages = [];
+
+// for (let i = 0; i < products.length; i++) {
+//   let text = `Товар ${products[i]} коштує ${prices[i]} грн`;
+//   messages.push(text);
+// }
+// console.log(messages.join('\n'));
+
+// // ==== Task 84. Створити масив товарів зі знижкою (finished 14.07.26 - 23)
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура'];
+// const prices = [25000, 800, 1500];
+
+// const discountMessages = [];
+
+// for (let i = 0; i < products.length; i++) {
+//   let discountPrice = prices[i] * 0.9;
+//   let text = `${products[i]}: стара ціна ${prices[i]} грн, нова ціна ${discountPrice} грн`;
+//   discountMessages.push(text);
+// }
+// console.log(discountMessages.join('\n'));
+
+// // ==== Task 85. Порахувати загальну суму товарів (started 15.07.26)
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура'];
+// const prices = [25000, 800, 1500];
+
+// let totalPrice = 0;
+
+// for (let i = 0; i < prices.length; i++) {
+//   totalPrice += prices[i];
+// }
+// console.log(`Загальна сума товарів: ${totalPrice} грн`);
+
+// // ==== Task 86. Знайти найдорожчий товар
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура'];
+// const prices = [25000, 800, 1500];
+
+// let maxPrice = 0;
+// let maxProduct = 0;
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] > maxPrice) {
+//     maxPrice = prices[i];
+//     maxProduct = products[i];
+//   }
+// }
+
+// console.log(`Найдорожчий товар: ${maxProduct}, ціна: ${maxPrice} грн`);
+
+// // ==== Task 87. Знайти найдешевший товар
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура'];
+// const prices = [25000, 800, 1500];
+
+// let minPrice = 0;
+// let minProduct = 0;
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] < minPrice || minPrice === 0) {
+//     minPrice = prices[i];
+//     minProduct = products[i];
+//   }
+// }
+
+// // v.2 from chat
+
+// let minPrice = prices[0];
+// let minProduct = products[0];
+
+// for (let i = 0; i < prices.length; i++) {
+// if (prices[i] < minPrice) {
+//   minPrice = prices[i];
+//   minProduct = products[i];
+// }
+// }
+
+// console.log(`Найдешевший товар: ${minProduct}, ціна: ${minPrice} грн`);
+
+// // ==== Task 88. Порахувати середню ціну товарів
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура'];
+// const prices = [25000, 800, 1500];
+
+// let sumPrices = 0;
+
+// for (let i = 0; i < prices.length; i++) {
+//   sumPrices += prices[i];
+// }
+
+// const averagePrices = sumPrices / prices.length;
+
+// console.log(`Середня ціна товарів: ${averagePrices} грн`);
+
+// // ==== Task 89. Порахувати товари дорожчі за середню ціну
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура'];
+// const prices = [25000, 800, 1500];
+
+// let totalPrice = 0;
+
+// for (let i = 0; i < prices.length; i++) {
+//   totalPrice += prices[i];
+// }
+
+// const averagePrice = totalPrice / prices.length;
+
+// const expensiveProducts = [];
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] > averagePrice) {
+//     expensiveProducts.push(products[i]);
+//   }
+// }
+
+// console.log(`Товари дорожчі за середню ціну: ${expensiveProducts.join(', ')}`);
+
+// // ==== Task 90. Товари дешевші за середню ціну
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура'];
+// const prices = [25000, 800, 1500];
+
+// let totalPrice = 0;
+
+// for (let i = 0; i < prices.length; i++) {
+//   totalPrice += prices[i];
+// }
+
+// const averagePrice = totalPrice / prices.length;
+
+// const cheapProducts = [];
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] < averagePrice) {
+//     cheapProducts.push(products[i]);
+//   }
+// }
+
+// console.log(`Товари дешевші за середню ціну: ${cheapProducts.join(', ')}`);
+
+// // ==== Task 91. Знайти товари у межах бюджету
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор'];
+// const prices = [25000, 800, 1500, 7000];
+
+// const budget = 5000;
+
+// const availableProducts = [];
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] <= budget) {
+//     availableProducts.push(products[i]);
+//   }
+// }
+
+// console.log(`Доступні товари: ${availableProducts.join(', ')}`);
+
+// // ==== Task 92. Знайти товари дорожчі за бюджет
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор'];
+// const prices = [25000, 800, 1500, 7000];
+
+// const budget = 5000;
+
+// const expensiveProducts = [];
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] > budget) {
+//     expensiveProducts.push(products[i]);
+//   }
+// }
+
+// console.log(`Товари дорожчі за бюджет: ${expensiveProducts.join(', ')}`);
+
+// // ==== Task 93. Порахувати суму товарів у межах бюджету
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор'];
+// const prices = [25000, 800, 1500, 7000];
+
+// const budget = 5000;
+
+// let availableTotalPrice = 0;
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] <= budget) {
+//     availableTotalPrice += prices[i];
+//   }
+// }
+
+// console.log(`Сума доступних товарів: ${availableTotalPrice} грн`);
+
+// // ==== Task 94. Порахувати кількість товарів у межах бюджету
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор'];
+// const prices = [25000, 800, 1500, 7000];
+
+// const budget = 5000;
+
+// let counterAvailableProducts = 0;
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] <= budget) {
+//     counterAvailableProducts++;
+//   }
+// }
+
+// console.log(`Кількість доступних товарів: ${counterAvailableProducts}`);
+
+// // ==== Task 95. Створити повідомлення про доступні товари (finished 15.07.26 - 11)
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор'];
+// const prices = [25000, 800, 1500, 7000];
+
+// const budget = 5000;
+
+// const availableMessages = [];
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] <= budget) {
+//     let textMessage = `${products[i]} доступна за ціною ${prices[i]} грн`;
+//     availableMessages.push(textMessage);
+//   }
+// }
+// console.log(availableMessages.join(`\n`));
+
+// // ==== Task 96. Створити повідомлення про товари дорожчі за бюджет
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор'];
+// const prices = [25000, 800, 1500, 7000];
+
+// const budget = 5000;
+
+// const expensiveMessages = [];
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] > budget) {
+//     const textMessage = `${products[i]} дорожчий за бюджет. Ціна: ${prices[i]} грн`;
+//     expensiveMessages.push(textMessage);
+//   }
+// }
+// console.log(expensiveMessages.join(`\n`));
+
+// // ==== Task 97. Розділити товари на доступні та дорогі
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор'];
+// const prices = [25000, 800, 1500, 7000];
+
+// const budget = 5000;
+
+// const availableProducts = [];
+// const expensiveProducts = [];
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] <= budget) {
+//     availableProducts.push(products[i]);
+//   } else {
+//     expensiveProducts.push(products[i]);
+//   }
+// }
+
+// console.log(`Доступні товари: ${availableProducts.join(`, `)}`);
+// console.log(`Дорогі товари: ${expensiveProducts.join(`, `)}`);
+
+// // ==== Task 98. Знайти найдорожчий доступний товар
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор'];
+// const prices = [25000, 800, 1500, 7000];
+
+// const budget = 10000;
+// let maxPrice = 0;
+// let maxProduct = '';
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] <= budget) {
+//     if (maxPrice < prices[i] || maxPrice === 0) {
+//       maxPrice = prices[i];
+//       maxProduct = products[i];
+//     }
+//   }
+// }
+
+// // v.2 from chat
+// // if (prices[i] <= budget && prices[i] > maxPrice) {
+// //   maxPrice = prices[i];
+// //   maxProduct = products[i];
+// // }
+
+// console.log(
+//   `Найдорожчий доступний товар: ${maxProduct}, ціна: ${maxPrice} грн`
+// );
+
+// // ==== Task 99. Знайти найдешевший товар поза бюджетом
+
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор'];
+// const prices = [25000, 800, 1500, 7000];
+
+// const budget = 5000;
+
+// let lessPrice = 0;
+// let lessProduct = '';
+
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] > budget && (prices[i] < lessPrice || lessPrice === 0)) {
+//     lessPrice = prices[i];
+//     lessProduct = products[i];
+//   }
+// }
+
+// console.log(
+//   `Найдешевший дорогий товар: ${lessProduct}, ціна: ${lessPrice} грн`
+// );
+
+// // ==== Task 100. Підсумкова практика
+
+const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор', 'Навушники'];
+const prices = [25000, 800, 1500, 7000, 1200];
+
+const budget = 5000;
+
+const expensivProducts = [];
+const cheapProducts = [];
+
+// Розділити товари на доступні і дорогі.
+
+for (let i = 0; i < prices.length; i++) {
+  if (prices[i] <= budget) {
+    cheapProducts.push(i);
+    // console.log(prices[i]);
+  } else {
+    expensivProducts.push(i);
+  }
+}
+
+console.log(expensivProducts);
+console.log(cheapProducts);
+
+// Порахувати загальну суму доступних товарів.
+
+let sumCheapProducts = 0;
+
+for (let j = 0; j < cheapProducts.length; j++) {
+  let indexCheapProducts = cheapProducts[j];
+  sumCheapProducts += prices[indexCheapProducts];
+}
+
+console.log(sumCheapProducts);
+
+// Знайти найдорожчий доступний товар.
+
+
+
+// Знайти найдешевший дорогий товар.
+// Створити масив повідомлень про доступні товари:
+// - Мишка доступна за ціною 800 грн
+// - Клавіатура доступна за ціною 1500 грн
+// - Навушники доступна за ціною 1200 грн
+// Створити масив повідомлень про дорогі товари:
+// - Ноутбук дорожчий за бюджет. Ціна: 25000 грн
+// - Монітор дорожчий за бюджет. Ціна: 7000 грн
