@@ -1403,50 +1403,89 @@
 //   `Найдешевший дорогий товар: ${lessProduct}, ціна: ${lessPrice} грн`
 // );
 
-// // ==== Task 100. Підсумкова практика
+// // // ==== Task 100. Підсумкова практика
 
-const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор', 'Навушники'];
-const prices = [25000, 800, 1500, 7000, 1200];
+// const products = ['Ноутбук', 'Мишка', 'Клавіатура', 'Монітор', 'Навушники'];
+// const prices = [25000, 800, 1500, 7000, 1200];
 
-const budget = 5000;
+// const budget = 5000;
 
-const expensivProducts = [];
-const cheapProducts = [];
+// const expensivProducts = [];
+// const cheapProducts = [];
 
-// Розділити товари на доступні і дорогі.
+// // Розділити товари на доступні і дорогі.
 
-for (let i = 0; i < prices.length; i++) {
-  if (prices[i] <= budget) {
-    cheapProducts.push(i);
-    // console.log(prices[i]);
-  } else {
-    expensivProducts.push(i);
-  }
-}
+// for (let i = 0; i < prices.length; i++) {
+//   if (prices[i] <= budget) {
+//     cheapProducts.push(i);
+//   } else {
+//     expensivProducts.push(i);
+//   }
+// }
 
-console.log(expensivProducts);
-console.log(cheapProducts);
+// console.log(expensivProducts);
+// console.log(cheapProducts);
 
-// Порахувати загальну суму доступних товарів.
+// // Порахувати загальну суму доступних товарів.
 
-let sumCheapProducts = 0;
+// let sumCheapProducts = 0;
 
-for (let j = 0; j < cheapProducts.length; j++) {
-  let indexCheapProducts = cheapProducts[j];
-  sumCheapProducts += prices[indexCheapProducts];
-}
+// for (let j = 0; j < cheapProducts.length; j++) {
+//   let indexCheapProducts = cheapProducts[j];
+//   sumCheapProducts += prices[indexCheapProducts];
+// }
 
-console.log(sumCheapProducts);
+// console.log(sumCheapProducts);
 
-// Знайти найдорожчий доступний товар.
+// // Знайти найдорожчий доступний товар.
+
+// let expensivCheapProducts = 0;
+
+// for (let n = 0; n < cheapProducts.length; n++) {
+//   if (prices[cheapProducts[n]] > expensivCheapProducts) {
+//     expensivCheapProducts = prices[cheapProducts[n]];
+//   }
+// }
+
+// console.log(expensivCheapProducts);
+
+// // Знайти найдешевший дорогий товар.
+
+// let cheapCheapProducts = 0;
+
+// for (let n = 0; n < cheapProducts.length; n++) {
+//   if (
+//     prices[cheapProducts[n]] < cheapCheapProducts ||
+//     cheapCheapProducts == 0
+//   ) {
+//     cheapCheapProducts = prices[cheapProducts[n]];
+//   }
+// }
+
+// console.log(cheapCheapProducts);
+
+// // Створити масив повідомлень про доступні товари:
+// // - Мишка доступна за ціною 800 грн
+// // - Клавіатура доступна за ціною 1500 грн
+// // - Навушники доступна за ціною 1200 грн
+
+// for (let m = 0; m < cheapProducts.length; m++) {
+//   console.log(
+//     `${products[cheapProducts[m]]} доступна за ціною ${prices[cheapProducts[m]]} грн`
+//   );
+// }
+
+// // Створити масив повідомлень про дорогі товари:
+// // - Ноутбук дорожчий за бюджет. Ціна: 25000 грн
+// // - Монітор дорожчий за бюджет. Ціна: 7000 грн
+
+// for (let b = 0; b < expensivProducts.length; b++) {
+//   console.log(
+//     `${products[expensivProducts[b]]} дорожчий за бюджет. Ціна: ${prices[expensivProducts[b]]} грн`
+//   );
+// }
 
 
-
-// Знайти найдешевший дорогий товар.
-// Створити масив повідомлень про доступні товари:
-// - Мишка доступна за ціною 800 грн
-// - Клавіатура доступна за ціною 1500 грн
-// - Навушники доступна за ціною 1200 грн
-// Створити масив повідомлень про дорогі товари:
-// - Ноутбук дорожчий за бюджет. Ціна: 25000 грн
-// - Монітор дорожчий за бюджет. Ціна: 7000 грн
+const productName: string = "Ноутбук";
+let price: number = 25000;
+let inStock: boolean = true;
